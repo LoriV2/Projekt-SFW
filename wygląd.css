@@ -1,0 +1,35 @@
+*
+{
+ padding: 0px;
+ margin: 0px;
+}
+
+body
+{
+ background-image: url("R.jfif");
+ background-position: center;
+ background-size: cover;
+ background-attachment: fixed;
+
+}
+.tlo
+{
+ background-color: grey;
+}
+.nag
+{
+
+ font-size: 25px;
+ float:center;
+ background-color: #AD7F5D;
+ text-align: center;
+ color: white;
+}
+.ram
+{
+ background-color: grey;
+}
+.bar
+{
+ 
+}
