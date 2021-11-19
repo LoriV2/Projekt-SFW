@@ -1,4 +1,5 @@
 <html>
+<meta charset=UTF8/>
 <body>
   <?php
  $has=$_POST['password'];
@@ -15,6 +16,7 @@
   
   
   ?>
+  
 </body>
 
 
