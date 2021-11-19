@@ -7,9 +7,11 @@
 </head> 
 <body>
   <form action="login.php" method="post"> 
-    <input type="text" name="login" /> 
+ <label>Mail:</label>  <input type="text" name="mail" /> 
+ <br/>
+  <label>Nazwa użytkownika:</label>  <input type="text" name="login" /> 
     <br/> 
-    <input type="password" name="password" /> 
+ <label>Hasło:</label>    <input type="password" name="password" /> 
     <br/>
     <button type="submit">log in</button>
   </form>
