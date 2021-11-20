@@ -1,7 +1,14 @@
 <html>
+<head>
 <meta charset=UTF8/>
-<body>
+<link rel='stylesheet' href='wygląd.css'>
+</head>
+<body class='wrapkfc'>
   <?php
+ $mail=$_POST['mail'];
+ $has=$_POST['password'];
+ $log=$_POST['login'];
+ 
 	$servername = "localhost";
 	$database = "danelogowania";
 	$username = "root";
@@ -18,9 +25,6 @@ if(mysqli_num_rows($select)) {
 	mysqli_close($conn);
 }  
 
- $mail=$_POST['mail'];
- $has=$_POST['password'];
- $log=$_POST['login'];
  
  $has = hash('sha256',$has);
  $has = base64_encode($has);
@@ -41,7 +45,8 @@ if ($conn->query($sql) === TRUE) {
 mysqli_close($conn);
 
   ?>
-<href='index.html'/>
+
+
 </body>
 
 
