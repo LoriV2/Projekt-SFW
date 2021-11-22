@@ -16,8 +16,29 @@
 
 <div class=nag2>
 <button onclick="window.location.href='rejestracja.php';" > zarejestruj się</button>
-<button onclick="window.location.href='logowanie.php';" > zaloguj się</button>
+<button onclick="logowanie()" > zaloguj się</button>
 </div>
+<div id='logowanie'>
+  <form action="logowanie.php" method="post">
+ <label>Nazwa użytkownika:</label> <p/><input type="text" name='login' required/> 
+    <br/> 
+ 
+ <label>Hasło:</label> <p/><input type="password" name='password' required/> 
+ 
+ <br/>
+
+<button type='submit' >zaloguj się</button>
+</form>
+</div>
+
+
+<script>
+function logowanie(){	
+	document.getElementById("logowanie").style.display = "block";
+
+}
+</script>
+
 
 
 </div>
