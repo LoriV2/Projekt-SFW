@@ -20,7 +20,7 @@ $has = hash('sha256',$has);
 $log = hash('sha256',$log);
 
 
-$select = mysqli_query($conn, "SELECT `login`,`haslo` FROM `loginhaslo` WHERE `haslo` = '".$has."' && `login`='".$log."' ") or exit(mysqli_error($conn));
+$select = mysqli_query($conn, "SELECT * FROM `loginhaslo` WHERE `login` = '".$log."' AND `haslo` = '".$has."'  ") or exit(mysqli_error($conn));
 if(mysqli_num_rows($select)) {
     exit('Witamy');
 	mysqli_close($conn);
