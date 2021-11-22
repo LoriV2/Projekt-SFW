@@ -20,11 +20,12 @@ $has = hash('sha256',$has);
 $log = hash('sha256',$log);
 
 
-$select = mysqli_query($conn, "SELECT * FROM `loginhaslo` WHERE `login` = '".$log."' AND `haslo` = '".$has."'  ") or exit(mysqli_error($conn));
-if(mysqli_num_rows($select)) {
-    $SESSION=
+$select = mysqli_query($conn, "SELECT `login`,`haslo` FROM `loginhaslo` WHERE `login` = '".$log."' AND `haslo` = '".$has."'  ") or exit(mysqli_error($conn));
+if($select != null) {
+    echo $log;
 	mysqli_close($conn);
-}
+}else 
+	echo 'chuj';
 
 ?>
 </body>
