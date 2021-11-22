@@ -89,3 +89,6 @@ text-align:center;
 	height:100px;
 	background-color: grey;
 }
+#logowanie {
+  display: none;
+}
