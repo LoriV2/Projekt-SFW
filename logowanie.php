@@ -11,28 +11,30 @@
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }else $cel=true;
-function filtruj($zmienna)
-    {
-        if($cel=true)
-            $zmienna = stripslashes($zmienna); 
-         return mysqli_real_escape_string(htmlspecialchars(trim($zmienna),$zmienna));
-    }
-	
-$has=filtruj($_POST['password']);
-$log=filtruj($_POST['login']);
+
+$has=($_POST['password']);
+$log=($_POST['login']);
 $has = hash('sha256',$has);
 $has = base64_encode($has);
 $has = hash('sha256',$has);
 $has = hash('sha256',$has);
 $log = hash('sha256',$log);
 
-$result = mysqli_query($conn,"SELECT login, haslo FROM uzytkownicy WHERE login = '".$log."' AND haslo = '".($has)."';");
- if (mysqli_num_rows($result) > 0){
-	 $_SESSION['zalogowano']= true;
-	 $_SESSION['login']=$login;
-	 header('Location: index.html');
-	 
- }else echo 'nie';
+$sql = "SELECT login, haslo FROM loginhaslo WHERE login = ?";
+	if($stmt=mysqli_prepare($conn,$sql)){
+		mysqli_stmt_bind_param($stmt, "s", $param_login);
+		$param_login = $log;
+	
+	if(mysqli_stmt_execute($stmt)){
+		mysqli_stmt_store_result($stmt);
+	
+	if(mysqli_stmt_num_rows($stmt) == 1 ){
+		mysqli_stmt_bind_result($stmt,$login,$haslo);
+			if (mysqli_stmt_fetch($stmt)){
+				if(password_verify())
+		
+		
+	
 ?>
 </body>
 
