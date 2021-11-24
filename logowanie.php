@@ -31,7 +31,7 @@ $sql = "SELECT login, haslo FROM loginhaslo WHERE login = ?";
 	if(mysqli_stmt_num_rows($stmt) == 1 ){
 		mysqli_stmt_bind_result($stmt,$login,$haslo);
 			if (mysqli_stmt_fetch($stmt)){
-				if(password_verify())
+				if(password_verify(a))
 		
 		
 	
