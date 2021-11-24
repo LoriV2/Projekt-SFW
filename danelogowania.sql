@@ -39,7 +39,6 @@ CREATE TABLE `loginhaslo` (
 
 INSERT INTO `loginhaslo` (`mail`, `login`, `haslo`) VALUES
 ('daforap444@sumwan.com', '84ff5d9d6a008c8be354634cba3b5435', 'f7bc67b188bbd41007a18e0becbdfd3fcef7a507dc64e066afd158d226f45151'),
-('', 'e3b0c44298fc1c149afbf4c8996fb924', 'ace460ecd53998a95df4c79db658d831df11b302ab431d3bdbe5b9452a25bff7'),
 ('heter@gmail.com', 'a950bea86bd3586fe8766f69b937c096', '316f34bbe72b96fedb29d957697e0164fcf3ad5364749d5d513962b6ece672d8'),
 ('oumanyliadvlntkdgv@mhzayt.online', '2a1a7e7296d7a8ea9e3ddf13819043f9', '422dea1ebe78da4acc4abd92b5dceb39380827f96cf18bf7abe92619710b080c');
 COMMIT;
