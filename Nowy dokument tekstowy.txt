@@ -4,3 +4,7 @@ https://www.w3schools.com/css/css_positioning.asp
 https://mattomatti.com/pl/br02
 Emmeciarz#3627(DC)
 https://www.minddevelopmentanddesign.com/blog/create-floating-html-element-stays-sidebar-scrolling/ pływające elementy
+https://www.w3schools.com/howto/howto_css_subnav.asp
+https://www.w3schools.com/howto/howto_css_icon_buttons.asp
+https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+https://www.w3schools.com/howto/howto_js_scroll_indicator.asp
