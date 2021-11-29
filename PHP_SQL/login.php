@@ -40,12 +40,12 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 };
-
-
 mysqli_close($conn);
 
-  ?>
 
+
+  ?>
+<?php header('Refresh: 30; Location: index.html'); ?>
 
 </body>
 
