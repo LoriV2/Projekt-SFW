@@ -20,21 +20,25 @@ $has = hash('sha256',$has);
 $has = hash('sha256',$has);
 $log = hash('sha256',$log);
 
-$sql = "SELECT login, haslo FROM loginhaslo WHERE login = ?";
-	if($stmt=mysqli_prepare($conn,$sql)){
-		mysqli_stmt_bind_param($stmt, "s", $param_login);
-		$param_login = $log;
-	
-	if(mysqli_stmt_execute($stmt)){
-		mysqli_stmt_store_result($stmt);
-	
-	if(mysqli_stmt_num_rows($stmt) == 1 ){
-		mysqli_stmt_bind_result($stmt,$login,$haslo);
-			if (mysqli_stmt_fetch($stmt)){
-				if(password_verify())
-		
-		
-	
+$loginT= msqli_real_escape_string($conn,$log)
+$hasloT= msqli_real_escape_string($conn,$has)
+
+$sql = "SELECT * FROM loginhaslo WHERE login = '$loginT' and haslo='$hasloT'";
+$result= mysql_querry($conn,$sql);
+$row - mysqli_fetch_array($result,MYSQLI_ASSOC);
+$active = $row['active'];
+
+$count = mysqli_num_rows($result);
+
+if($count == 1){
+	session_register('')
+
+
+}
+
+
+
+
 ?>
 </body>
 
