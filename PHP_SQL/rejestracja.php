@@ -10,7 +10,9 @@
   <form action="login.php" method="post" class='wrapkfc'> 
  <label>Mail:</label> <p/> <input type="text" name="mail" required /> 
  <br/>
-  <label>Nazwa użytkownika:</label> <p/><input type="text" name="login" required/> 
+ <label>Nazwa użytkownika:</label> <p/><input type="text" name="userimie" required/> 
+    <br/> 
+  <label>Login:</label> <p/><input type="text" name="login" required/> 
     <br/> 
  <label>Hasło:</label> <p/><input type="password" name="password" required/> 
    
