@@ -14,6 +14,7 @@ die("Connection failed: " . $conn->connect_error);
 
 $has=($_POST['password']);
 $log=($_POST['login']);
+$userimie=($_POST['userimie']);
 $has = hash('sha256',$has);
 $has = base64_encode($has);
 $has = hash('sha256',$has);
