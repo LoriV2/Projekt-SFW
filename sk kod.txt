@@ -1,0 +1,3 @@
+<marquee bgcolor="#fbdefb" onmouseover="stop()" style="border:solid" onmouseout="start()" scrollamount="3" scrolldelay="60" ><font color="black"> Test działania kodu </font></marquee>
+
+przewijający się tekst
