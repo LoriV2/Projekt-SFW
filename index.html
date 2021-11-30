@@ -1,75 +1,62 @@
+<!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="wygląd.css">
-<script src="scripty.js"></script> 
-
-
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strona Tytułowa</title>
+    <link rel="icon" type="image/x-icon" href="ikonka.png">
+    <link rel="stylesheet" href="wyglad.css">
 </head>
 <body>
+    <div class="header">
+        <h1>ŚWIAT PTAKÓW</h1>
+    </div>
 
-<div class=nag>
+    <!-- href="#" link do elementu obecnej strony -->
+    <!-- href="/" link innej strony -->
+    <div class="topnav">
+        <ul>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li>
+                <a href="#">Link</a>
+                <ul class="nav-submenu">
+                    <li>1</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-<div class=nag1>
-<a class="button" href="index.html">Strona główna</a>
-</div>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>MIGRACJA PTAKÓW</h2>
+                <div class="fakeimg" style="height:200px;"><img src="obrazy/migracja.jpg" width="30%" height="104%"><div class="migt">Spośród gatunków, które wylatują do ciepłych krajów na okres<br /> jesienno-zimowy, najbardziej znany jest na pewno bocian.<br />Co roku, gdy kończy się lato i zbliża pora jesienno-zimowa część ptaków odlatuje z Polski. <br/>Niektóre gatunki z powodu niesprzyjającego zimowego klimatu i niskich temperatur migrują do... <br/><h4><marquee direction="right" width="30px"> >>>> </marquee><font color="red">Kliknij tutaj!</font><marquee width="30px"> <<<< </marquee></h4></div></div></div>
+            <div class="card">
+                <h2>NIE UWIERZYSZ ŻE TO PTAK !</h2>
+                <div class="fakeimg" style="height:200px;"><img src="obrazy/ptak.jpg" width="30%" height="104%"><div class="migt2">Struś ciekawostki - Poznaj nieznane informacje o największych ptakach świata.<br /> Co jedzą strusie? Jak szybko biegają? Gdzie żyją? <br/>Ile kosztuje i waży strusie jajo? Czy rzeczywiście chowają głowę w piasek? <br/>Wszystkie odpowiedzi znajdziesz w jednym miejscu.<h6><marquee direction="right" width="30px"> >>>> </marquee><font color="red">Kliknij tutaj!</font><marquee width="30px"> <<<< </marquee></h6></div></div></div></div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>coś</h2>
+                <div class="fakeimg" style="height:100px;">Image</div>
+                <p>coś</p>
+            </div>
+            <div class="card">
+                <h3>Popular Post</h3>
+                <div class="fakeimg"><p>Image</p></div>
+                <div class="fakeimg"><p>Image</p></div>
+                <div class="fakeimg"><p>Image</p></div>
+            </div>
+            <div class="card">
+                <h3>Follow Me</h3>
+                <p>Tekst</p>
+            </div>
+        </div>
+    </div>
 
-<div class=nag2>
-<button onclick="window.location.href='rejestracja.php';" > zarejestruj się</button>
-<button onclick="logowanie()" > zaloguj się</button>
-</div>
-				<!-- blok pojawiający się po kliknięciu zaloguj  -->
-				<div id='logowanie'>
-				  <form action="logowanie.php" method="post">
-				 <label>Login:</label> <p/><input type="text" name='login' required/> 
-					<br/> 
-				 
-				 <label>Hasło:</label> <p/><input type="password" name='password' required/> 
-				 
-				 <br/>
-
-				<button type='submit' >zaloguj się</button>
-				</form>
-				</div>
-
-
-<script>
-function logowanie(){	
-	document.getElementById("logowanie").style.display = "block";
-
-}
-</script>
-
-
-
-</div>
-
-<div class=ram>
-<img class="mySlides" src="template.png" alt="custom_html_banner1" style="width:100%">
-</div>
-
-<div class=menu>meni opci</div>
-
-
-
-<div class=tekstL style="padding-bottom:2000px">L</div>
-
-<div class=tekstS style="padding-bottom:2000px">S
-
-<div class=tekstP style="padding-bottom:2000px">P</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
+    <div class="footer">
+        <h2>Stopka</h2>
+    </div>
 
 </body>
 </html>
