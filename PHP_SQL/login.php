@@ -8,7 +8,8 @@
  $mail=$_POST['mail'];
  $has=$_POST['password'];
  $log=$_POST['login'];
- 
+ $userimie=($_POST['userimie']);
+
 	$servername = "localhost";
 	$database = "danelogowania";
 	$username = "root";
@@ -25,6 +26,12 @@ if(mysqli_num_rows($select)) {
 	mysqli_close($conn);
 }  
 
+$imie = mysqli_query($conn, "SELECT `userimie` FROM `loginhaslo` WHERE `userimie` = '".$userimie."'") or exit(mysqli_error($conn));
+if(mysqli_num_rows($select)) {
+    exit('Ta nazwa użytkownika jest już zajęta');
+	mysqli_close($conn);
+}  
+
  
  $has = hash('sha256',$has);
  $has = base64_encode($has);
@@ -32,8 +39,8 @@ if(mysqli_num_rows($select)) {
  $has = hash('sha256',$has);
  $log = hash('sha256',$log);
 
-$sql = "INSERT INTO loginhaslo (mail,login,haslo)
-VALUES ('$mail','$log','$has')";
+$sql = "INSERT INTO loginhaslo (mail,login,haslo,userimie)
+VALUES ('$mail','$log','$has','$userimie')";
 
 if ($conn->query($sql) === TRUE) {
   echo "Pomyślnie zostałeś zarejestrowany";
@@ -45,7 +52,7 @@ mysqli_close($conn);
 
 
   ?>
-<?php header('Refresh: 30; Location: index.html'); ?>
+<?php header('Refresh: 15; Location: index.html'); ?>
 
 </body>
 
