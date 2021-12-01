@@ -192,7 +192,20 @@ h6 {
         outline: none;
       }
 .rejestracja{
-float:right;
+    float:right;
+    
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: rgb(49, 185, 233);
+        border-radius: 3px;
+        outline: none;
+		position:relative;
+  }
+  .wsz{
+    z-index: 2;
+display:outside;
+margin-left:auto;
 
-
-}
+  }
