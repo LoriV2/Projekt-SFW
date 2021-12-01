@@ -88,7 +88,7 @@ body {
 .fakeimg {
     background-color: #aaa;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
     
     font-size: 19px;
 }
@@ -141,6 +141,25 @@ h4 {
     font-size: 30px;
     margin-top: 10px;
 }
+h8 {
+    margin-left: 30%;
+    font-size: 30px;
+    margin-top: 10px;
+	font-family: Comic Sans MS;
+}
+h2 {
+    margin-left: 10px;
+    font-size: 30px;
+    margin-top: 10px;
+	font-family: Comic Sans MS;
+}
+h1 {
+    margin-left: 10px;
+    font-size: 30px;
+    margin-top: 10px;
+	font-family: eras medium itc;
+	color: yellow;
+}
 .migt2{
     float: right;
     margin-top: 10px;
@@ -158,18 +177,18 @@ h6 {
         text-decoration: none;
         color: #ffffff;
         background-color: rgb(49, 185, 233);
-        border-radius: 6px;
+        border-radius: 3px;
         outline: none;
-		 margin-left: 10px;
+		margin-left: 10px;
       }
 	  .button1 {
         display: inline-block;
         padding: 10px 20px;
         text-align: center;
         text-decoration: none;
-        color: #ffffff;
-        background-color: rgb(49, 185, 233);
-        border-radius: 6px;
+        color: black;
+        background-color: #dac9ba;
+        border-radius: 3px;
         outline: none;
       }
 .rejestracja{
