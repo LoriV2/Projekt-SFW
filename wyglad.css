@@ -192,7 +192,6 @@ h6 {
         outline: none;
       }
 .rejestracja{
-    float:right;
         padding: 10px 20px;
         text-align: center;
         text-decoration: none;
@@ -203,3 +202,14 @@ h6 {
 		position: absolute;
 		margin-left: 92%;
   }
+  .login{
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(49, 185, 233);
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 78%;
+}
