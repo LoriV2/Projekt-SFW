@@ -12,9 +12,9 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }else $cel=true;
 
-$has=($_POST['password']);
-$log=($_POST['login']);
-$userimie=($_POST['userimie']);
+$has= $_POST['password'];
+$log= $_POST['login'];
+$userimie= $_POST['userimie'];
 $has = hash('sha256',$has);
 $has = base64_encode($has);
 $has = hash('sha256',$has);
@@ -32,10 +32,12 @@ $active = $row['active'];
 $count = mysqli_num_rows($result);
 
 if($count == 1){
-	session_register('')
-
-
-}
+	session_register(".$userimie.");
+$_SESSION['logowanie']=true;
+$sql = "INSERT INTO loginhaslo (liczbalogowan)
+VALUES (1)";
+}else 
+echo 'Błędne dane logowania';
 
 
 
