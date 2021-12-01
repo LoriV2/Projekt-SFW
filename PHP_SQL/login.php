@@ -53,7 +53,7 @@ mysqli_close($conn);
 
   ?>
 <?php header('Refresh: 15; Location: index.html'); ?>
-
+<a href='index.html'></a>
 </body>
 
 
