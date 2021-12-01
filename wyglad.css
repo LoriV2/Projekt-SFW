@@ -213,3 +213,11 @@ h6 {
     position: absolute;
     margin-left: 78%;
 }
+.wrapkfcV2{
+display:none;
+margin: auto;
+width: 50%;
+border: 3px solid green;
+padding: 10px;
+
+}
