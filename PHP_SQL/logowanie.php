@@ -26,7 +26,7 @@ $hasloT= msqli_real_escape_string($conn,$has)
 
 $sql = "SELECT * FROM loginhaslo WHERE login = '$loginT' and haslo='$hasloT'";
 $result= mysql_querry($conn,$sql);
-$row - mysqli_fetch_array($result,MYSQLI_ASSOC);
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 $active = $row['active'];
 
 $count = mysqli_num_rows($result);
