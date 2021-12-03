@@ -95,8 +95,8 @@ body {
 
 .card {
     background-color: white;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 2px;
+    margin-top: 10px;
 }
 
 .row:after {
@@ -108,8 +108,13 @@ body {
 .footer {
     padding: 5px;
     text-align: center;
+	position: fixed;
+	left: 0;
+  bottom: 0;
+  width: 100%;
     background: #ddd;
     margin-top: 45px;
+	
 }
 
 @media screen and (max-width: 800px) {
@@ -134,12 +139,12 @@ p {
 .migt {
     float: right;
     margin-top: 10px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 h4 {
-    margin-left: 30%;
-    font-size: 30px;
-    margin-top: 10px;
+    margin-left: 75%;
+    font-size: 20px;
+    margin-top: 80px;
 }
 h8 {
     margin-left: 30%;
@@ -169,12 +174,12 @@ h10 {
 .migt2{
     float: right;
     margin-top: 10px;
-    margin-right: 13%;
+    margin-right: 5px;
 }
 h6 {
-    margin-left: 36%;
-    font-size: 30px;
-    margin-top: 10px;
+    margin-left: 75%;
+    font-size: 20px;
+    margin-top: 80px;
 }
 .button {
         display: inline-block;
@@ -259,4 +264,9 @@ background-color: #333;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 60px;
 
+}
+.tekst4{
+    margin-top: 0px;
+	margin-left: 0px;
+	font-size: 22px;
 }
