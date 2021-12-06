@@ -1,4 +1,4 @@
 <?PHP
-session_start('');
-$_SESSION['logowanie']=false;
+session_start();
+$nazwauz= $_SESSION['NAZWAUZ'];
 ?>
