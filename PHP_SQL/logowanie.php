@@ -14,34 +14,59 @@ die("Connection failed: " . $conn->connect_error);
 
 $has= $_POST['password'];
 $log= $_POST['login'];
-$userimie= $_POST['userimie'];
+$userimie= '';
+
 $has = hash('sha256',$has);
 $has = base64_encode($has);
 $has = hash('sha256',$has);
 $has = hash('sha256',$has);
 $log = hash('sha256',$log);
 
-$loginT= msqli_real_escape_string($conn,$log)
-$hasloT= msqli_real_escape_string($conn,$has)
+if(!empty($log) && !empty($password) && !is_numeric($log))
+{
 
-$sql = "SELECT * FROM loginhaslo WHERE login = '$loginT' and haslo='$hasloT'";
-$result= mysql_querry($conn,$sql);
-$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-$active = $row['active'];
+	//czyta z bazy wiesz
+	$uzytkownik = mysqli_query("SELECT userimie FROM `loginhaslo` WHERE login='$log'");
 
-$count = mysqli_num_rows($result);
+	if (!$uzytkownik) {
+		echo 'Could not run query: ' . mysql_error();
+		exit;
+	}
+	$row = mysql_fetch_row($uzytkownik);
+	
+	$row[1] = $userimie;
 
-if($count == 1){
-	session_register(".$userimie.");
-$_SESSION['logowanie']=true;
-$sql = "INSERT INTO loginhaslo (liczbalogowan)
-VALUES (1)";
-}else 
-echo 'Błędne dane logowania';
+	$pytanie = "SELECT * FROM `loginhaslo` WHERE login = '$log' limit 1";
+
+	$popytaniu = mysqli_query($conn, $pytanie);
+
+	if($pytanie)
+	{
+		if($pytanie && mysqli_num_rows($pytanie) > 0)
+		{
+			$dane = mysqli_fetch_assoc($pytanie);
+			if($dane['haslo'] === $has)
+			{
+
+
+				$_SESSION['NAZWAUZ'] = $dane['userimie'];
+				header("Location: index.html")
+die;
+			}
+		} echo "Błędne dane logowania";
+	
+	}else echo "Błędne dane logowania";
+
+	
+
+}
 
 
 
 
+
+
+exit();
 ?>
 </body>
 
