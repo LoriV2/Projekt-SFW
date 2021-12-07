@@ -1,7 +1,11 @@
-tu morzna coś umieszczać
-
-komda
-
 .clearfix {
   overflow: auto;
 }
+
+
+
+
+Spośród gatunków, które wylatują do ciepłych krajów na okres jesienno-zimowy, najbardziej zn-
+any jest na pewno bocian. Co roku, gdy kończy się lato i zbliża pora jesienno-zimowa część
+ptaków odlatuje z Polski. Niektóre gatunki z powodu niesprzyjającego zimowego klimatu i nisk-
+ich temperatur migrują do...
