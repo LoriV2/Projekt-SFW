@@ -5,6 +5,7 @@
     <title>Strona Główna</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="wyglad.css">
+    <script src="scrypt.js"></script>
 </head>
 <body>
     <div class='czarnetlo' id=></div>
@@ -35,7 +36,7 @@
     <!--furmularz do rejestracji-->
    <div id= modal2 class='wrapkfcV2'>
     <form action="PHP_SQL/login.php" method="post" id=wiesz class='wrapkfcV2'> 
-        <span onclick="document.getElementById('wiesz').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span onclick="document.getElementById('wiesz').style.display='none' "class="close" title="Close Modal">&times;</span>
         <label>Email:</label> <p/> <input type="text" name="mail" required /> 
         <br/>
         <label>Nazwa użytkownika:</label> <p/><input type="text" name="userimie" required/> 
@@ -50,7 +51,7 @@
          <!--furmularz do logowania-->
       <div id= modal>
      <form action="PHP_SQL/logowanie.php" method="post" id=niewiesz class='wrapkfcV2'> 
-        <span onclick="document.getElementById('niewiesz').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span onclick="document.getElementById('niewiesz').style.display='none' "class="close" title="Close Modal">&times;</span>
        <label>Login:</label> <p/><input type="text" name="login" required/> 
            <br/> 
         <label>Hasło:</label> <p/><input type="password" name="password" required/> 
@@ -58,25 +59,9 @@
          <br/> <br/> <button type="submit">Zaloguj się</button>
          </form>
 </div>
-         <!--skrypt do pokazywania okienka z rejestracją i logowaniem-->
-    <script>
-      var modal = document.getElementById('modal');
-      var modal2 = document.getElementById('modal2');
+       
 
-      function pokaz() {
-          document.getElementById("wiesz").style.display = "block";
-        }
-
-        function pokaz2(){
-            document.getElementById("niewiesz").style.display="block"; 
-             }
- window.onclick = function(event) {
-    if (event.target == modal )  
-    {
-        modal.style.display = "none";
-    }
-}
-        </script>
+   
    
    <div class="row">
         <div class="leftcolumn">
@@ -105,15 +90,15 @@
             <div class="card">
                 <h8>Popular Post</h8>
                 <div class="fakeimg"><a class="button1" disabled>1.</a><a href="https://www.w3docs.com/" class="button">Ciekawostki o wronach</a></div>
-                <div class="fakeimg"><a class="button1" disabled>2.</a><a href="https://www.w3docs.com/" class="button">Najbardziej inteligentne ptaki</a></div>
-                <div class="fakeimg"><a class="button1" disabled>3.</a><a href="https://www.w3docs.com/" class="button">Galeria zdjęć papug</a></div>
+                <div class="fakeimg"><a class="button1" disabled>2.</a><a href="https://www.w3docs.com/" class="button">Wroni Arystoteles</a></div>
+                <div class="fakeimg"><a class="button1" disabled>3.</a><a href="https://www.w3docs.com/" class="button">Galeria zdjęć wróbli</a></div>
 				<div class="fakeimg"><a class="button1" disabled>4.</a><a href="https://www.w3docs.com/" class="button">tekst2</a></div>
 				<div class="fakeimg"><a class="button1" disabled>5.</a><a href="https://www.w3docs.com/" class="button">tekst3</a></div>
             </div>
             
         </div>
     </div>
-	<div class=padoru>
+	<div class = 'padoru'>
 <marquee  behavior="scroll" direction="right">        
           <img src=
 "obrazy/padoru.jpg" width="2%" height="2%"
