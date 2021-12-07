@@ -51,11 +51,11 @@ if(!empty($log) && !empty($password) && !is_numeric($log))
 
 				$_SESSION['NAZWAUZ'] = $dane['userimie'];
 				header("Location: index.html")
-die;
+				die;
 			}
-		} echo "Błędne dane logowania";
+		} 
 	
-	}else echo "Błędne dane logowania";
+	}
 
 	
 
