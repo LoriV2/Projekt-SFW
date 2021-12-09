@@ -25,7 +25,7 @@ $log = hash('sha256',$log);
 if(!empty($log) && !empty($password) && !is_numeric($log))
 {
 
-	//czyta z bazy wiesz
+	//czyta z bazy danych
 	$uzytkownik = mysqli_query("SELECT userimie FROM `loginhaslo` WHERE login='$log'");
 
 	if (!$uzytkownik) {
