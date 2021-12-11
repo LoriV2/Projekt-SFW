@@ -69,6 +69,7 @@
   width: 100%;
   text-align: center;
 }
+<<<<<<< HEAD
 .custom-list{
   
   list-style: inside url("ikonki/crow-solid.svg");
@@ -83,3 +84,9 @@
 .custom-list li::marker{
   font-size: 1.2em;
 }
+=======
+
+.boidy{
+  background-color: aqua;
+  }
+>>>>>>> 5e00ee2244117ab2effb14c345eda9c8d75e461d
