@@ -65,3 +65,7 @@
 .link-hover-effect{
   padding: 5px 0px;
 }
+.custom-footer p{
+  width: 100%;
+  text-align: center;
+}
