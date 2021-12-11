@@ -12,8 +12,8 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }else $cel=true;
 
-$has= $_POST['password'];
-$log= $_POST['login'];
+$has= $_POST['haslo'];
+$log= $_POST['Login'];
 $userimie= '';
 
 $has = hash('sha256',$has);
@@ -50,7 +50,7 @@ if(!empty($log) && !empty($password) && !is_numeric($log))
 
 
 				$_SESSION['NAZWAUZ'] = $dane['userimie'];
-				header("Location: index.html")
+				header("Location: ../HTML/index.html")
 				die;
 			}
 		} 
