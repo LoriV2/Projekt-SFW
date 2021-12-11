@@ -51,7 +51,7 @@ mysqli_close($conn);
 
 
 
-   header("Projekt-SFW/index.html");
+   header("../HTML/Weryfikacja.html");
 exit(); ?>
 </body>
 
