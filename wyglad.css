@@ -69,3 +69,17 @@
   width: 100%;
   text-align: center;
 }
+.custom-list{
+  
+  list-style: inside url("ikonki/crow-solid.svg");
+
+}
+.custom-list li{
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  font-size: large;
+  padding: 2px 0;
+}
+.custom-list li::marker{
+  font-size: 1.2em;
+}
