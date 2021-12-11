@@ -4,15 +4,29 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Galeria</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet" href="wyglad.css">
+    <link rel="stylesheet" href="../wyglad.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+				
 
 
 
 </head>
 <body>
+
+<style>
+.custom{
+  max-height: 300px;
+  object-fit: cover;
+}
+</style>
+
+
 
     <div class="header">
         <img class="img-responsive" src="../obrazy/template.png" alt="EROR">
@@ -38,7 +52,6 @@
                             <li><a href="#">Wronie Ciekawostki</a></li>
                             <li><a href="#">Bociany żywot</a></li>
                             <li><a href="#">Ptaki w kulturze świata</a></li>
-                            <li><a href="#">Ptasie Memy</a></li>
                             <li><a href="#">Papużka falista</a></li>
                             <li><a href="#">Jaskółka</a></li>
                             <li><a href="#">Wróbel</a></li>
@@ -56,7 +69,7 @@
     </nav>
 
 
-    <div class="container">
+    <div class="container-flex">
       <h2>Carousel Example</h2>
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -66,30 +79,25 @@
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
     
-        <!-- Wrapper for slides -->
         <div class="carousel-inner">
     
-          <div class="item active">
-            <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+          <div class="item active custom">
+            <img src="../obrazy/padoru.jpg" alt="Los Angeles" style="width:100%;">
             <div class="carousel-caption">
               <h3>Los Angeles</h3>
               <p>LA is always so much fun!</p>
             </div>
           </div>
     
-          <div class="item">
-            <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+          <div class="item custom">
+            <img src="../obrazy/wrobel.jpg" alt="Chicago" style="width:100%;">
             <div class="carousel-caption">
-              <h3>Chicago</h3>
-              <p>Thank you, Chicago!</p>
             </div>
           </div>
         
-          <div class="item">
-            <img src="ny.jpg" alt="New York" style="width:100%;">
+          <div class="item custom">
+            <img src="../obrazy/ptak.jpg" alt="New York" style="width:100%;">
             <div class="carousel-caption">
-              <h3>New York</h3>
-              <p>We love the Big Apple!</p>
             </div>
           </div>
       
@@ -110,11 +118,11 @@
 
 
 
-  <div class="navbar navbar-inverse navbar-fixed-bottom">
-  <div class="container"> 
-  <p class="navbar-text">© Random</p>
-  </div>
-  </div>
-
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="container"> 
+      <p class="navbar-text">Copyright © Świat Wróbli.pl 2021</p>
+      </div>
+      </div>
+      
 </body>
 </html>
