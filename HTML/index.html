@@ -50,35 +50,53 @@
                 <li><a href="#">Pomoc</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a onclick='pokaz()'><span class="glyphicon glyphicon-user"></span> Zajejestruj się</a></li>
-                <li><a onclick='pokaz2()'><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
+                <li><a ><span class="glyphicon glyphicon-user"></span> Zarejestruj się</a></li>
+                <li><a type="button" class="btn btn-link" data-toggle="modal" data-target="#Modal"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+           <!----modal się zaczyna--->
+<div id="Modal" class="modal fade" role='dialog'>
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header login-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title">Logowanie</h4>
+            </div>
+            <div class="modal-body">
+              <!---tu jest logowanie-->
+                   <form role="form">
+			<div class="form-group">
+			<label for="email">Login</label>
+			<input type="text" name= "email" class="form-control" id="email"
+			placeholder="MójLogin3254">
+			</div>
+			<div class="form-group">
+			<label for="password">Hasło</label>
+			<input type="password" name="password" class="form-control" id="password"
+			placeholder="MojeHasło321432">
+			</div>
+                   </form>
+               
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Zaloguj się</button>
+             <div class="row">
+                  <div class="col-xs-7 col-sm-7 col-md-7">
+                    <a href="#" class="btn btn-link">Zapomniałeś hasła?</a>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-4">
+                  <a href="#" class="btn btn-link">Zarejestruj się</a>
+                  </div>
+             </div>
+            </div>
+        </div>
+      </div>
+  </div>
+<!--koniec modalu--->
 
-
-
-    
-        
-        <div class="container">
-            <form action="/action_page.php" action="/action_page.php" class="was-validated" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
-              <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Email@przyklad.com" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="pwd" placeholder="Hasło123" name="pwd" required>
-              </div>
-              <div class="checkbox">
-                <label><input type="checkbox" name="remember"> Remember me</label>
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-          </div>
-          
 
 
 
