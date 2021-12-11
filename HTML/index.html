@@ -12,6 +12,7 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
 </head>
 
 <div class="header">
@@ -58,16 +59,27 @@
 
 
 
-<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
-    <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="AdresEmail@example.com" required>
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Hasło" required>
-        <label for="floatingPassword">Password</label>
-      </div>
-</div>
+
+    
+        
+        <div class="container">
+            <form action="/action_page.php" action="/action_page.php" class="was-validated" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark">
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Email@przyklad.com" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Hasło123" name="pwd" required>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+          
+
 
 
 <div class="container-fluid text-center">
