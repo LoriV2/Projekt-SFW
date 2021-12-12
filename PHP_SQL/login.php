@@ -1,17 +1,17 @@
 <html>
 <head>
 <meta charset=UTF8/>
-<link rel='stylesheet' href='wygląd.css'>
+<link rel='stylesheet' href='../wyglad.css'>
 </head>
 <body class='wrapkfc'>
   <?php
- $mail=$_POST['email'];
- $has=$_POST['haslo'];
- $login=$_POST['Login'];
- $userimie=($_POST['userimie']);
- $imie=($_POST['Imię']);
- $nazwisko=($_POST['Nazwisko']);
- $plec = ($_POST['Płeć']);
+      $mail=$_POST['email'];
+      $has=$_POST['haslo'];
+      $login=$_POST['login'];
+      $userimie=($_POST['userimie']);
+      $imie=($_POST['Imię']);
+      $nazwisko=($_POST['Nazwisko']);
+      $plec = ($_POST['Płeć']);
 
 	$servername = "localhost";
 	$database = "danelogowania";
@@ -28,14 +28,6 @@ if(mysqli_num_rows($select)) {
       exit('Ten email jest już zarejestrowany');
     mysqli_close($conn);
   }  
-
-$imie = mysqli_query($conn, "SELECT `userimie` FROM `loginhaslo` WHERE `userimie` = '".$userimie."'") or exit(mysqli_error($conn));
-if(mysqli_num_rows($select)) {
-      exit('Ta nazwa użytkownika jest już zajęta');
-    mysqli_close($conn);
-  }  
-
-if ($plec === 'płeć'){ $plec = null; }
  
  $has = hash('sha256',$has);
  $has = base64_encode($has);
@@ -43,19 +35,17 @@ if ($plec === 'płeć'){ $plec = null; }
  $has = hash('sha256',$has);
  $login = hash('sha256',$login);
 
-$sql = "INSERT INTO loginhaslo (Płeć,mail,login,haslo,userimie,Imię,Nazwisko)
-VALUES ('$plec','$mail','$login','$has','$userimie','$imie','$nazwisko')";
 
-if ($conn->query($sql) === TRUE) {
-  echo "Pomyślnie zostałeś zarejestrowany";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-};
-mysqli_close($conn);
+ $sql = "INSERT INTO loginhaslo (Płeć,mail,login,haslo,userimie,Imię,Nazwisko) VALUES ('$plec','$mail','$login','$has','$userimie','$imie','$nazwisko')";
+ if($conn->query($sql) === true){
+     echo "Pomyślnie zarejestrowano.";
+      
 
 
+ } else{
+     echo "ERROR: Could not able to execute $sql. " . $conn->error;
+ }
 
-   header("../HTML/Weryfikacja.html");
 exit(); ?>
 </body>
 
