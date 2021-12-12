@@ -13,14 +13,15 @@ die("Connection failed: " . $conn->connect_error);
 }else $cel=true;
 
 $has= $_POST['haslo'];
-$log= $_POST['Login'];
+$login= $_POST['Login'];
 $userimie= '';
 
 $has = hash('sha256',$has);
 $has = base64_encode($has);
 $has = hash('sha256',$has);
 $has = hash('sha256',$has);
-$log = hash('sha256',$log);
+$login = hash('sha256',$log);
+
 
 if(!empty($log) && !empty($password) && !is_numeric($log))
 {
