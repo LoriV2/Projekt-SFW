@@ -10,11 +10,11 @@
   $conn = mysqli_connect($servername, $username, $password, $database);
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
-}else $cel=true;
+}
 
-$has= $_POST['haslo'];
-$login= $_POST['Login'];
-$userimie= '';
+$has = $_POST['haslo'];
+$login = $_POST['Login'];
+$userimie = '';
 
 $has = hash('sha256',$has);
 $has = base64_encode($has);
@@ -48,18 +48,14 @@ if(!empty($log) && !empty($password) && !is_numeric($log))
 			$dane = mysqli_fetch_assoc($pytanie);
 			if($dane['haslo'] === $has)
 			{
-
-
 				$_SESSION['NAZWAUZ'] = $dane['userimie'];
-				header("Location: ../HTML/index.html")
 				die;
-			}
+				header("Location: ../HTML/index.html");
+				
+			}else echo 'Błędne danie logowania';
 		} 
 	
 	}
-
-	
-
 }
 
 
