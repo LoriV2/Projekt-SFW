@@ -28,6 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `loginhaslo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `płeć` varchar(32) COLLATE utf8_bin NOT NULL,
   `mail` varchar(32) COLLATE utf8_bin NOT NULL,
   `login` varchar(32) COLLATE utf8_bin NOT NULL,
   `haslo` varchar(64) COLLATE utf8_bin NOT NULL,
@@ -36,21 +38,15 @@ CREATE TABLE `loginhaslo` (
   `Nazwisko` varchar(25) COLLATE utf8_bin NOT NULL,
   `liczbalogowan` INT COLLATE utf8_bin NOT NULL,
     `status` int(11) NOT NULL DEFAULT '0',
-  `email_verification_link` varchar(255) NOT NULL,
-  `email_verified_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
+  UNIQUE KEY `mail` (`mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Zrzut danych tabeli `loginhaslo`
 --
 
-INSERT INTO `loginhaslo` (`mail`, `login`, `haslo`) VALUES
-('daforap444@sumwan.com', '84ff5d9d6a008c8be354634cba3b5435', 'f7bc67b188bbd41007a18e0becbdfd3fcef7a507dc64e066afd158d226f45151'),
-('heter@gmail.com', 'a950bea86bd3586fe8766f69b937c096', '316f34bbe72b96fedb29d957697e0164fcf3ad5364749d5d513962b6ece672d8'),
-('oumanyliadvlntkdgv@mhzayt.online', '2a1a7e7296d7a8ea9e3ddf13819043f9', '422dea1ebe78da4acc4abd92b5dceb39380827f96cf18bf7abe92619710b080c');
-COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
