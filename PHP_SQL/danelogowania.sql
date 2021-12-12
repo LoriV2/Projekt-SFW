@@ -34,7 +34,12 @@ CREATE TABLE `loginhaslo` (
   `userimie` varchar(25) COLLATE utf8_bin NOT NULL,
   `Imię` varchar(25) COLLATE utf8_bin NOT NULL,
   `Nazwisko` varchar(25) COLLATE utf8_bin NOT NULL,
-  `liczbalogowan` INT COLLATE utf8_bin NOT NULL
+  `liczbalogowan` INT COLLATE utf8_bin NOT NULL,
+    `status` int(11) NOT NULL DEFAULT '0',
+  `email_verification_link` varchar(255) NOT NULL,
+  `email_verified_at` TIMESTAMP NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
