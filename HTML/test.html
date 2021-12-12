@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Galeria</title>
-    <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="stylesheet" href="../wyglad.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-				
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../wyglad.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 
 
 </head>
+
 <body>
 
-<style>
-.custom{
-  max-height: 300px;
-  object-fit: cover;
-}
-</style>
+  <style>
+    .custom {
+      max-height: 300px;
+      object-fit: cover;
+    }
+  </style>
 
 
 
-    <div class="header">
-        <img class="img-responsive" src="../obrazy/template.png" alt="EROR">
+  <div class="header">
+    <img class="img-responsive" src="../obrazy/template.png" alt="EROR">
+  </div>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Świat Ptaków</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="test.html">Galeria</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Posty<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="migracja.html">Migracja Ptaków</a></li>
+              <li><a href="Ciekawostki o wronach.html">Wronie Ciekawostki</a></li>
+              <li><a href="Zywot bocianow.html">Bociany żywot</a></li>
+              <li><a href="Ptaki w kulturze.html">Ptaki w kulturze świata</a></li>
+              <li><a href="Jaskolka.html">Jaskółka</a></li>
+              <li><a href="Wroble.html">Wróbel</a></li>
+            </ul>
+          </li>
+          <li><a href="pomoc.html">O Nas</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Zajejestruj się</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Świat Ptaków</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="test.html">Galeria</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Posty<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Migracja Ptaków</a></li>
-                            <li><a href="#">Wronie Ciekawostki</a></li>
-                            <li><a href="#">Bociany żywot</a></li>
-                            <li><a href="#">Ptaki w kulturze świata</a></li>
-                            <li><a href="#">Papużka falista</a></li>
-                            <li><a href="#">Jaskółka</a></li>
-                            <li><a href="#">Wróbel</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Pomoc</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Zajejestruj się</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <div class="container-flex">
-      <h2>Carousel Example</h2>
+  <div class="col-sm-8 text-left">
+    <div class="container">
+      <h2>Galeria</h2>
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -78,31 +78,29 @@
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
-    
+
         <div class="carousel-inner">
-    
-          <div class="item active custom">
-            <img src="../obrazy/padoru.jpg" alt="Los Angeles" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Los Angeles</h3>
-              <p>LA is always so much fun!</p>
-            </div>
-          </div>
-    
-          <div class="item custom">
-            <img src="../obrazy/wrobel.jpg" alt="Chicago" style="width:100%;">
+
+          <div class="item active">
+            <img src="../obrazy/1.png" alt="EROR" style="width:100%;">
             <div class="carousel-caption">
             </div>
           </div>
-        
-          <div class="item custom">
-            <img src="../obrazy/ptak.jpg" alt="New York" style="width:100%;">
+
+          <div class="item">
+            <img src="../obrazy/2.png" alt="EROR" style="width:100%;">
             <div class="carousel-caption">
             </div>
           </div>
-      
+
+          <div class="item">
+            <img src="../obrazy/3.png" alt="EROR" style="width:100%;">
+            <div class="carousel-caption">
+            </div>
+          </div>
+
         </div>
-    
+
         <!-- Left and right controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left"></span>
@@ -112,17 +110,18 @@
           <span class="glyphicon glyphicon-chevron-right"></span>
           <span class="sr-only">Next</span>
         </a>
+        <div class="test"></div>
       </div>
     </div>
+  </div>
 
 
-
-
-    <div class="navbar navbar-inverse navbar-fixed-bottom">
-      <div class="container"> 
+  <div class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
       <p class="navbar-text">Copyright © Świat Wróbli.pl 2021</p>
-      </div>
-      </div>
-      
+    </div>
+  </div>
+
 </body>
+
 </html>
