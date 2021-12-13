@@ -63,7 +63,7 @@
             </div>
             <div class="modal-body">
                 <!---tu jest logowanie-->
-                <form role="form" action='../PHP_SQL/logowanie.php'>
+                <form method="post" role="form" action='../PHP_SQL/logowanie.php'>
                     <div class="form-group">
                         <label for="email">Login</label>
                         <input type="text" name="Login" class="form-control" id="email" placeholder=""
@@ -74,6 +74,8 @@
                         <input type="password" name="haslo" class="form-control" id="haslo"
                             placeholder="" required>
                     </div>
+
+
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary">Zaloguj się</button>
