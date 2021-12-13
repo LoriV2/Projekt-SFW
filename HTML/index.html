@@ -45,49 +45,52 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href='rejestracja.html'><span class="glyphicon glyphicon-user"></span> Zarejestruj się</a></li>
-                <li><a type="button" class="btn btn-link" data-toggle="modal" onclick="document.getElementById('id01').style.display='block'"><span
+                <li><a type="button" class="btn btn-link" data-toggle="modal" data-target="#Modal"><span
                             class="glyphicon glyphicon-log-in"></span> Zaloguj</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<!--modal się zaczyna z logowaniem-->
-     <div id="id01" class="modal">
-      
-      <form class="modal-content animate" action="../PHP_SQL/logowanie.php" method="post">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        </div>
-    
-        <div class="modal-container">
-          <label for="uname"><b>Login</b></label>
-          <input type="text"  name="Login" required>
-    
-          <label for="psw"><b>Hasło</b></label>
-          <input type="password" name="haslo" required>
-            
-          <button type="submit">Zaloguj się</button>
-        </div>
-    
-        <div class="container">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw">Nie masz konta? <a href="rejestracja.html">Zarejestruj się</a></span>
-        </div>
-      </form>
-    </div>
-    
-    <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-    
-    // kiedy użytkownik klika gdziekolwiek poza formularzem zamyka się
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-    </script>
+<!----modal się zaczyna--->
+<div id="Modal" class="modal fade" role='dialog'>
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header login-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title">Logowanie</h4>
+            </div>
+            <div class="modal-body">
+                <!---tu jest logowanie-->
+                <form method="post" role="form" action='../PHP_SQL/logowanie.php'>
+                    <div class="form-group">
+                        <label for="email">Login</label>
+                        <input type="text" name="Login" class="form-control" id="email" placeholder=""
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Hasło</label>
+                        <input type="password" name="haslo" class="form-control" id="haslo"
+                            placeholder="" required>
+                    </div>
 
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Zaloguj się</button>
+                </form>
+                <div class="row">
+                    <div class="col-xs-7 col-sm-7 col-md-7">
+                        <a href="odzyskiwaniehasla.html" class="btn btn-link">Zapomniałeś hasła?</a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <a href="rejestracja.html" class="btn btn-link">Zarejestruj się</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--koniec modalu--->
 
 
 
