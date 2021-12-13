@@ -1,2 +1,0 @@
-# Projekt-SFW
-42
