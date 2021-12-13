@@ -2,6 +2,7 @@
 <body>
 
 <?php
+session_start();
 	$servername = "localhost";
 	$database = "danelogowania";
 	$username = "root";
@@ -20,7 +21,7 @@ $has = hash('sha256',$has);
 $has = base64_encode($has);
 $has = hash('sha256',$has);
 $has = hash('sha256',$has);
-$login = hash('sha256',$log);
+$login = hash('sha256',$login);
 
 
 if(!empty($log) && !empty($password) && !is_numeric($log))
@@ -48,9 +49,10 @@ if(!empty($log) && !empty($password) && !is_numeric($log))
 			$dane = mysqli_fetch_assoc($pytanie);
 			if($dane['haslo'] === $has)
 			{
+				
 				$_SESSION['NAZWAUZ'] = $dane['userimie'];
-				die;
-				header("Location: ../HTML/index.html");
+				close($conn);
+				echo "<script>window.top.location='../HTML/index.html'</script>";
 				
 			}else echo 'Błędne danie logowania';
 		} 
@@ -63,7 +65,7 @@ if(!empty($log) && !empty($password) && !is_numeric($log))
 
 
 
-exit();
+
 ?>
 </body>
 
