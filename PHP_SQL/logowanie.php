@@ -17,25 +17,24 @@ $has = $_POST['haslo'];
 $login = $_POST['Login'];
 $userimie = '';
 
-
+$has = hash('sha256',$has);
+$has = base64_encode($has);
+$has = hash('sha256',$has);
+$has = hash('sha256',$has);
+$login = hash('sha256',$login);
 
 
 if(!empty($log) && !empty($password) && !is_numeric($log))
 {
-	$has = hash('sha256',$has);
-	$has = base64_encode($has);
-	$has = hash('sha256',$has);
-	$has = hash('sha256',$has);
-	$login = hash('sha256',$login);
-	
+
 	//czyta z bazy danych
-	$uzytkownik = mysqli_query("SELECT userimie FROM `loginhaslo` WHERE login='$log'");
+	$uzytkownik = mysqli_query($conn, "SELECT userimie FROM `loginhaslo` WHERE login='$log'");
 
 	if (!$uzytkownik) {
-		echo 'Could not run query: ' . mysql_error();
+		echo 'Could not run query: ' . mysqli_error($uzytkownik);
 		exit;
 	}
-	$row = mysql_fetch_row($uzytkownik);
+	$row = mysqli_fetch_row($uzytkownik);
 	
 	$row[1] = $userimie;
 
@@ -45,15 +44,14 @@ if(!empty($log) && !empty($password) && !is_numeric($log))
 
 	if($pytanie)
 	{
-		if($pytanie && mysqli_num_rows($pytanie) > 0)
+		if($pytanie && mysqli_num_rows($popytaniu) > 0)
 		{
-			$dane = mysqli_fetch_assoc($pytanie);
-			
+			$dane = mysqli_fetch_assoc($popytaniu);
 			if($dane['haslo'] === $has)
 			{
 				
 				$_SESSION['NAZWAUZ'] = $dane['userimie'];
-				close($conn);
+				$conn->close();
 				echo "<script>window.top.location='../HTML/index.html'</script>";
 				
 			}else echo 'Błędne danie logowania';
