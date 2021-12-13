@@ -17,16 +17,17 @@ $has = $_POST['haslo'];
 $login = $_POST['Login'];
 $userimie = '';
 
-$has = hash('sha256',$has);
-$has = base64_encode($has);
-$has = hash('sha256',$has);
-$has = hash('sha256',$has);
-$login = hash('sha256',$login);
+
 
 
 if(!empty($log) && !empty($password) && !is_numeric($log))
 {
-
+	$has = hash('sha256',$has);
+	$has = base64_encode($has);
+	$has = hash('sha256',$has);
+	$has = hash('sha256',$has);
+	$login = hash('sha256',$login);
+	
 	//czyta z bazy danych
 	$uzytkownik = mysqli_query("SELECT userimie FROM `loginhaslo` WHERE login='$log'");
 
@@ -47,6 +48,7 @@ if(!empty($log) && !empty($password) && !is_numeric($log))
 		if($pytanie && mysqli_num_rows($pytanie) > 0)
 		{
 			$dane = mysqli_fetch_assoc($pytanie);
+			
 			if($dane['haslo'] === $has)
 			{
 				
