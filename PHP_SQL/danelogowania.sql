@@ -31,7 +31,7 @@ CREATE TABLE `loginhaslo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `płeć` varchar(32) COLLATE utf8_bin NOT NULL,
   `mail` varchar(32) COLLATE utf8_bin NOT NULL,
-  `login` varchar(32) COLLATE utf8_bin NOT NULL,
+  `login` varchar(64) COLLATE utf8_bin NOT NULL,
   `haslo` varchar(64) COLLATE utf8_bin NOT NULL,
   `userimie` varchar(25) COLLATE utf8_bin NOT NULL,
   `Imię` varchar(25) COLLATE utf8_bin NOT NULL,
