@@ -65,6 +65,18 @@
         mysqli_close($conn);
       }
 
+
+      $to_email = "$mail";
+    $subject = "maila wysyłam";
+    $message = 'siemaaa';
+    $headers = 'From: noreply@swiatptakow.com';
+
+    $sqq = mail($to_email,$subject,$message,$headers);
+
+    if($sqq = true){
+    echo 'mail został wysłany';
+}else echo 'mail nie został wysłany';
+
       exit();
       ?>
     </div>
